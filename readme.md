@@ -23,7 +23,7 @@ Untuk menjalankan proyek ini, Anda memerlukan:
 
 - Python 3.9 - 3.11
 - Library Python berikut:
-  - TensorFlow
+  - TensorFlow 2.15.0
   - NumPy
   - Pandas
   - Matplotlib
@@ -34,7 +34,7 @@ Untuk menjalankan proyek ini, Anda memerlukan:
 
 1. Clone repository ini:
     ```sh
-    git clone https://github.com/username/repository.git
+    git clone https://github.com/rfahur11/aksara_jawa.git
     cd repository
     ```
 
@@ -75,15 +75,20 @@ Untuk menjalankan proyek ini, Anda memerlukan:
 Berikut adalah struktur direktori proyek ini:
 
 repository/
-├── data/ # Direktori untuk dataset
-├── models/ # Direktori untuk menyimpan model terlatih
-├── notebooks/ # Jupyter Notebooks
-│ └── train_model.ipynb # Notebook untuk pelatihan model
-├── scripts/
-│ ├── predict.py # Skrip untuk melakukan prediksi
-│ 
-├── requirements.txt # Daftar dependencies
-└── README.md # Dokumentasi proyek
+├── data/
+│   ├── raw/                   # Direktori untuk dataset mentah
+│   └── README.md              # Dokumentasi tentang data
+├── models/                    # Direktori untuk menyimpan model terlatih
+│   └── modelC.keras           # model yang tersimpan untuk diuji coba
+│   └── modelC.tflite          # model yang telah dideploy untuk diintegrasikan ke aplikasi android
+├── notebooks/                 # Jupyter Notebooks
+│   └── notebook.ipynb         # Notebook untuk pelatihan model
+    └── notebook_coolab.ipynb  # Notebook untuk pelatihan model di Coolab
+    └── load_model.ipynb       # Notebook untuk ppengujian model
+├── .gitignore                 # File untuk mengabaikan file/direktori tertentu dalam Git
+├── README.md                  # Dokumentasi proyek
+└── requirements.txt           # Daftar dependencies
+
 
 
 ## Contoh
