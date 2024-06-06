@@ -76,7 +76,7 @@ Berikut adalah struktur direktori proyek ini:
 
 repository/
 ├── data/
-│   ├── raw/                   # Direktori untuk dataset mentah
+│   ├── raw/                   # Direktori untuk dataset mentah \n
 │   └── README.md              # Dokumentasi tentang data
 ├── models/                    # Direktori untuk menyimpan model terlatih
 │   └── modelC.keras           # model yang tersimpan untuk diuji coba
