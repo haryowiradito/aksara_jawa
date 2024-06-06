@@ -55,7 +55,7 @@ Untuk menjalankan proyek ini, Anda memerlukan:
 
 1. Jalankan notebook `train_model.ipynb` untuk melatih model:
     ```sh
-    jupyter notebook train_model.ipynb
+    jupyter notebook.ipynb
     ```
    - Atur parameter pelatihan seperti jumlah epoch, ukuran batch, dsb., di dalam notebook.
 
@@ -82,7 +82,7 @@ repository/
 │   └── modelC.keras           # model yang tersimpan untuk diuji coba
 │   └── modelC.tflite          # model yang telah dideploy untuk diintegrasikan ke aplikasi android
 ├── notebooks/                 # Jupyter Notebooks
-│   └── notebook.ipynb         # Notebook untuk pelatihan model
+    └── notebook.ipynb         # Notebook untuk pelatihan model
     └── notebook_coolab.ipynb  # Notebook untuk pelatihan model di Coolab
     └── load_model.ipynb       # Notebook untuk ppengujian model
 ├── .gitignore                 # File untuk mengabaikan file/direktori tertentu dalam Git
