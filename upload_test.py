@@ -1,3 +1,4 @@
+import flask
 from flask import Flask, request, render_template, redirect, url_for
 import numpy as np
 import tensorflow as tf
@@ -41,8 +42,9 @@ def upload_image():
             predictions = model.predict(img_array)
             predicted_class_index = np.argmax(predictions, axis=1)
             predicted_class_name = class_names[predicted_class_index[0]]
+            confidence_score = np.max(predictions, axis=1)[0]
 
-            return render_template('result_upload.html', class_name=predicted_class_name)
+            return render_template('result_upload.html', class_name=predicted_class_name, confidence=confidence_score)
     return render_template('upload.html')
 
 if __name__ == '__main__':
