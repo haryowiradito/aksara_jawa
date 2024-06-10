@@ -12,7 +12,6 @@ app = Flask(__name__)
 model_path = './model/modelC.keras'
 model = tf.keras.models.load_model(model_path)
 
-
 # Function to prepare the image
 def prepare_image(img, target_size=(150, 150)):
     if img.mode != "RGB":
@@ -22,11 +21,9 @@ def prepare_image(img, target_size=(150, 150)):
     img_array = np.expand_dims(img_array, axis=0)
     return img_array
 
-
 @app.route('/')
 def home():
     return render_template('draw.html')
-
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -39,14 +36,13 @@ def predict():
 
     predictions = model.predict(img_array)
     predicted_class_index = np.argmax(predictions, axis=1)
+    confidence_score = np.max(predictions, axis=1)[0]
 
     # Class names should be consistent with your model's output
-    class_names = ['ba', 'ca', 'da', 'dha', 'ga', 'ha', 'ja', 'ka', 'la', 'ma', 'na', 'nga', 'nya', 'pa', 'ra', 'sa',
-                   'ta', 'tha', 'wa', 'ya']
+    class_names = ['ba', 'ca', 'da', 'dha', 'ga', 'ha', 'ja', 'ka', 'la', 'ma', 'na', 'nga', 'nya', 'pa', 'ra', 'sa', 'ta', 'tha', 'wa', 'ya']
     predicted_class_name = class_names[predicted_class_index[0]]
 
-    return jsonify(prediction=predicted_class_name)
-
+    return jsonify(prediction=predicted_class_name, confidence=confidence_score * 100)
 
 if __name__ == '__main__':
     app.run(debug=True)
