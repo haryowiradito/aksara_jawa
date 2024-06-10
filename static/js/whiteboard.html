@@ -56,7 +56,7 @@ function predict() {
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('result').innerText = 'Prediction: ' + data.prediction;
+        document.getElementById('result').innerText = `Prediction: ${data.prediction}, Confidence: ${data.confidence.toFixed(2)}%`;
     })
     .catch(error => {
         console.error('Error:', error);
