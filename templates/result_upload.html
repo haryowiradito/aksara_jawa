@@ -8,6 +8,7 @@
 <body>
     <h1>Prediction Result</h1>
     <p>Predicted class: {{ class_name }}</p>
+    <p>Confidence score: {{ (confidence * 100)|round(2) }}%</p>
     <a href="/">Upload another image</a>
 </body>
 </html>
