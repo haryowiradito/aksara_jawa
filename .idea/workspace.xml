@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="22ac4b8a-f983-4819-9652-836edaff3700" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/load_model.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/load_model.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebook.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notebook_coolab.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/notebook_coolab.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,9 +12,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2hXAuM1cKlJncGiWtiRV55z2ZB4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,7 +24,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "fahrur__rozi",
-    "last_opened_file_path": "D:/projek_belajar/mini_projek/hanacaraka_s"
+    "last_opened_file_path": "D:/projek_belajar/phyton/projek_try"
   }
 }]]></component>
   <component name="SharedIndexes">
