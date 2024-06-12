@@ -1,18 +1,25 @@
+import os
 import tensorflow as tf
 
-# Load or create your Keras model
+# Menonaktifkan oneDNN custom operations
+os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
+
+# Memuat model Keras dari file
 model = tf.keras.models.load_model('./model/modelC.keras')
 
-# Convert model architecture to JSON format
+# Mengonversi arsitektur model ke format JSON
 model_json = model.to_json()
 
-# Save JSON to file
+# Menyimpan arsitektur model ke file JSON
 with open('model.json', 'w') as json_file:
     json_file.write(model_json)
 
 print("Model architecture has been saved to 'model.json'.")
 
-# Save model weights to a binary file
-model.save_weights('model_weights.bin')
+# Menyimpan bobot model ke file HDF5 dengan ekstensi .bin
+model.save_weights('model_weights.h5')
+
+# Mengganti nama file HDF5 menjadi .bin
+os.rename('model_weights.h5', 'model_weights.bin')
 
 print("Model weights have been saved to 'model_weights.bin'.")
